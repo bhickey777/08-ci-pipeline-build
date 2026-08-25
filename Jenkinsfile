@@ -29,7 +29,9 @@ pipeline {
                 // Builds the Docker image using the multi-stage Dockerfile from Lab 06.
                 // Tags with the Jenkins build number so every build produces a uniquely
                 // tagged image — avoids overwriting previous builds' artefacts.
-                sh "docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} ."
+                dir('starter') {
+                  sh "docker build -t ${IMAGE_NAME}:${BUILD_NUMBER} ."
+                }
             }
         }
 
@@ -37,7 +39,9 @@ pipeline {
             steps {
                 // Runs the Maven test suite inside the build environment.
                 // -B (batch mode) suppresses interactive prompts so output is clean in logs.
-                sh "mvn -B test"
+                dir('starter') {
+                  sh "mvn -B test"
+                }
             }
             post {
                 always {
