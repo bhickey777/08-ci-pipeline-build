@@ -46,7 +46,9 @@ By the end of this lab you will have:
 5. Confirm Jenkins discovers `main` and creates a sub-job for it.
 6. Confirm (or add) a GitHub webhook pointed at your Jenkins instance, so builds trigger
    immediately on push, rather than waiting for Jenkins to poll.
+7. If web hooks are not available then try polling up against your repository.
 
+   
 ### Part C — Prove it triggers automatically
 
 7. Create a new branch, make a small change, push it, and open a PR.
