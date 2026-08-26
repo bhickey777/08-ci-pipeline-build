@@ -1,6 +1,6 @@
 # Module 08 Lab — Build a CI Pipeline from Scratch
 
-## Recap: building on Modules 03, 05, and 06 
+## Recap: building on Modules 03, 05, and 06 ##
 
 - **Module 03**: PR workflow and branch protection, which can require a CI check to pass
 - **Module 05**: pipeline stages conceptually, using a provided log you only had to read
