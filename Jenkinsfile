@@ -48,7 +48,7 @@ pipeline {
                     // Publishes JUnit XML results to Jenkins regardless of pass/fail.
                     // This gives a test-trend chart in the Jenkins UI and lets branch
                     // protection rules check the test result as a status check.
-                    junit 'target/surefire-reports/*.xml'
+                    junit allowEmptyResults: true, testResults: '**/target/surefire-reports/*.xml'
                 }
             }
         }
