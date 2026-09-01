@@ -39,6 +39,8 @@ pipeline {
         stage('Start Database') {
             steps {
                sh 'docker compose up -d postgres'
+               sh 'docker start paywealth_postgres'
+               sh 'docker logs -f paywealth_postgres'
             }
         }
 
