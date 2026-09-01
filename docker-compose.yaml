@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: n3u3d4!
-      POSTGRES_DB: paywealth
+      POSTGRES_DB: paysprint_wealth
 
     ports:
       - "5432:5432"
