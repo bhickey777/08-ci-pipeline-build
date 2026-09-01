@@ -31,6 +31,12 @@ pipeline {
             }
         }
 
+        stage('Start Database') {
+            steps {
+               sh 'docker compose up -d postgres'
+            }
+        }
+
         stage('Test') {
             steps {
                 // Runs the Maven test suite inside the build environment.
