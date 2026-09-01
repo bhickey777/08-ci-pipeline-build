@@ -51,6 +51,12 @@ pipeline {
             }
         }
 
+        stage('Stop Containers') {
+            steps {
+                sh 'docker compose down'
+            }
+        }
+
         stage('Test') {
             steps {
                 // Runs the Maven test suite inside the build environment.
