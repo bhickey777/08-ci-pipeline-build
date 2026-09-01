@@ -1,4 +1,4 @@
-#yaml file for postgres connection
+#yaml file for postgres connection to paysprint_wealth
 services:
   postgres:
     image: postgres:18
