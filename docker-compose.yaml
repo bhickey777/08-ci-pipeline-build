@@ -5,6 +5,7 @@ services:
     container_name: paywealth_postgres
 
     environment:
+      POSTGRES_HOST: localhost
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: n3u3d4!
       POSTGRES_DB: paysprint_wealth
