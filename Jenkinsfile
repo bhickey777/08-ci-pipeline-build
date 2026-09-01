@@ -41,7 +41,7 @@ pipeline {
                sh '''
                  docker compose up -d postgres
                  docker start paywealth_postgres
-                 docker logs -f paywealth_postgres
+                 docker logs --since 1m paywealth_postgres
                 '''
             }
         }
