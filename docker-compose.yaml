@@ -1,6 +1,7 @@
 services:
   postgres:
     image: postgres:18
+    containername: paywealth_postgres
 
     environment:
       POSTGRES_USER: postgres
