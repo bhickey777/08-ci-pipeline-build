@@ -3,7 +3,7 @@
 // STATUS: BLOCKED — a running Jenkins instance with a Multibranch Pipeline job and
 // a GitHub webhook is required to execute and demonstrate automatic triggering.
 // The Jenkinsfile is syntactically complete and follows the lab spec.
-// Added stages for testing the database and docker compose with postgres
+// Added stages for testing the database and docker compose with postgres db
 
 pipeline {
     agent any
