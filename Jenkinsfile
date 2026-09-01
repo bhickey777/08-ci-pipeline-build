@@ -46,6 +46,16 @@ pipeline {
             }
         }
 
+        stage('List Database Tables') {
+            steps {
+                sh '''
+                    docker exec paywealth_postgres \
+                    psql -U postgres -d paywealth \
+                    -c "\\dt"
+                '''
+            }
+        }
+        
         stage('Test Database') {
             steps {
                 sh '''
