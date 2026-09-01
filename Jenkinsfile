@@ -51,6 +51,8 @@ pipeline {
                 sh '''
                 docker ps -a
                 docker exec paywealth_postgres \
+                   psql -U postgres -c "\\l"
+                docker exec paywealth_postgres \
                   psql -U postgres -d paywealth \
                   -c "SELECT * FROM clients;"
                 '''
