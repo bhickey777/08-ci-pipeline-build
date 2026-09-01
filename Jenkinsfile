@@ -45,7 +45,7 @@ pipeline {
         stage('Test Database') {
             steps {
                 sh '''
-                docker compose exec -T postgres \
+                docker exec -T postgres \
                   psql -U postgres -d paywealth \
                   -c "SELECT * FROM clients;"
                 '''
