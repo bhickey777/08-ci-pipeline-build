@@ -45,8 +45,8 @@ pipeline {
             steps {
                 sh '''
                 docker compose exec -T postgres \
-                  psql -U postgres -d mydb \
-                  -c "SELECT * FROM customers;"
+                  psql -U postgres -d paywealth \
+                  -c "SELECT * FROM clients;"
                 '''
             }
         }
