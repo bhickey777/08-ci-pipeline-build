@@ -4,9 +4,10 @@ COPY pom.xml .
 COPY src ./src
 RUN mvn -B clean package -DskipTests
 
+# use the eclipse version 
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
-COPY --from=build /src/target/team-skeleton-0.1.0.jar app.jar
+COPY --from=build /src/target/team-skeleton.jar app.jar
 USER appuser
 ENTRYPOINT ["java", "-jar", "app.jar"]
