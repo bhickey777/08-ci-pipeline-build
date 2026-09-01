@@ -41,6 +41,16 @@ pipeline {
             }
         }
 
+        stage('Test Database') {
+            steps {
+                sh '''
+                docker compose exec -T postgres \
+                  psql -U postgres -d mydb \
+                  -c "SELECT * FROM customers;"
+                '''
+            }
+        }
+
         stage('Test') {
             steps {
                 // Runs the Maven test suite inside the build environment.
